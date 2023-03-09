@@ -30,11 +30,9 @@ export default {
     padding: 10px 20px;
     cursor: pointer;
 }
-
 .task.reminder {
     border-left: 5px solid green;
 }
-
 .task h3 {
     display: flex;
     align-items: center;

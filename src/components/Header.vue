@@ -1,7 +1,7 @@
 <template>
   <header>
     <h1>{{ title }}</h1>
-    <Button
+    <Button v-show="homePage"
       @btn-click="$emit('toggle-add-task')"
       :text="showAddTask ? 'Close' : 'Add Task'"
       :color="showAddTask ? 'red' : 'green'"
@@ -14,14 +14,23 @@ import Button from "@/components/Button.vue"
 export default {
   name: "Header",
   props: {
-    title: {
-        type: String,
-        // eslint-disable-next-line prettier/prettier
-        showAddTask: Boolean,
-    },
+    title: String,
+    showAddTask: {
+      type: Boolean,
+      default: false
+    }
   },
   components: {
     Button,
+  },
+  computed: {
+    homePage(){
+      if(this.$route.path === '/') {
+      return true
+          }
+          else {
+            return false
+          }} 
   }
 }
 </script>

@@ -1,4 +1,4 @@
-# vue-crash
+# vue-crash-task
 
 ## Project setup
 ```
@@ -13,6 +13,10 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
+
+## Runs local Server
+```
+npm run backend
 ```
 
 ### Lints and fixes files
